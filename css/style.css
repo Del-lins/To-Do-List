@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+  list-style: none;
+  overflow-y: hidden;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  background-color: rgb(0, 0, 0, .6);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.container {
+  background-color: rgb(0, 0, 0, 0.65);
+  width: 500px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto;
+  z-index: 10;
+  position: relative;
+}
+
+.input {
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  height: 40px;
+  padding-left: 10px;
+  background-color: #726f6f;
+  color: #fff;
+}
+
+.input::placeholder {
+  color: #fff;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  background-color: #03793e;
+  color: #fff;
+  font-size: 17px;
+  padding: 0 15px;
+  cursor: pointer;
+  font-weight: 700;
+  float: right;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:active {
+  opacity: 0.6;
+}
+
+.list {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.task {
+  background-color: #726f6f;
+  color: #fff;
+  box-shadow: 1px 4px 5px rgb(105, 104, 104);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+img {
+  height: 25px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.task:hover img {
+  opacity: 1;
+}
+
+.done {
+  background-color: #28af3a;
+  text-decoration: line-through;
+}
+
+.input.erro {
+  border: 2px solid rgb(240, 18, 18);
+}
+
+.input.erro::placeholder {
+  color: rgb(168, 17, 17);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 540px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    margin: 0 auto;
+  }
+}
